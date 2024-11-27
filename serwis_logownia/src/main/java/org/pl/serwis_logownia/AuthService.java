@@ -8,4 +8,8 @@ public class AuthService {
 
     @GetMapping("/login/")
     private void login(String username, String password) {}
+
+    private String hashPassword(String password){
+        return "";
+    }
 }
