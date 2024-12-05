@@ -1,0 +1,14 @@
+org\pl\serwis_logownia\services\CookieService.class
+org\pl\serwis_logownia\config\DatabaseConfig.class
+org\pl\serwis_logownia\entities\UserToJSON.class
+org\pl\serwis_logownia\controllers\AuthServiceController.class
+org\pl\serwis_logownia\entities\Role.class
+org\pl\serwis_logownia\utils\HashHandler.class
+org\pl\serwis_logownia\utils\ServiceKeyValidator.class
+org\pl\serwis_logownia\services\AuthService.class
+org\pl\serwis_logownia\utils\ServiceKeyFilter.class
+org\pl\serwis_logownia\entities\User.class
+org\pl\serwis_logownia\utils\JwtUtils.class
+org\pl\serwis_logownia\AuthServiceApplication.class
+org\pl\serwis_logownia\repositories\UserRepository.class
+org\pl\serwis_logownia\config\SecurityConfig.class

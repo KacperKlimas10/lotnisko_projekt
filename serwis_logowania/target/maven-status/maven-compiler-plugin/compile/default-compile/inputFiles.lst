@@ -1,0 +1,14 @@
+C:\Users\Kacper\Desktop\lotnisko_projekt\serwis_logowania\src\main\java\org\pl\serwis_logownia\AuthServiceApplication.java
+C:\Users\Kacper\Desktop\lotnisko_projekt\serwis_logowania\src\main\java\org\pl\serwis_logownia\config\DatabaseConfig.java
+C:\Users\Kacper\Desktop\lotnisko_projekt\serwis_logowania\src\main\java\org\pl\serwis_logownia\config\SecurityConfig.java
+C:\Users\Kacper\Desktop\lotnisko_projekt\serwis_logowania\src\main\java\org\pl\serwis_logownia\controllers\AuthServiceController.java
+C:\Users\Kacper\Desktop\lotnisko_projekt\serwis_logowania\src\main\java\org\pl\serwis_logownia\entities\Role.java
+C:\Users\Kacper\Desktop\lotnisko_projekt\serwis_logowania\src\main\java\org\pl\serwis_logownia\entities\User.java
+C:\Users\Kacper\Desktop\lotnisko_projekt\serwis_logowania\src\main\java\org\pl\serwis_logownia\entities\UserToJSON.java
+C:\Users\Kacper\Desktop\lotnisko_projekt\serwis_logowania\src\main\java\org\pl\serwis_logownia\repositories\UserRepository.java
+C:\Users\Kacper\Desktop\lotnisko_projekt\serwis_logowania\src\main\java\org\pl\serwis_logownia\services\AuthService.java
+C:\Users\Kacper\Desktop\lotnisko_projekt\serwis_logowania\src\main\java\org\pl\serwis_logownia\services\CookieService.java
+C:\Users\Kacper\Desktop\lotnisko_projekt\serwis_logowania\src\main\java\org\pl\serwis_logownia\utils\HashHandler.java
+C:\Users\Kacper\Desktop\lotnisko_projekt\serwis_logowania\src\main\java\org\pl\serwis_logownia\utils\JwtUtils.java
+C:\Users\Kacper\Desktop\lotnisko_projekt\serwis_logowania\src\main\java\org\pl\serwis_logownia\utils\ServiceKeyFilter.java
+C:\Users\Kacper\Desktop\lotnisko_projekt\serwis_logowania\src\main\java\org\pl\serwis_logownia\utils\ServiceKeyValidator.java
