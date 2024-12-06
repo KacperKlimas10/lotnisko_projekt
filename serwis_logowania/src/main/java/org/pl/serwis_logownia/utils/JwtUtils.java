@@ -4,34 +4,36 @@ import io.jsonwebtoken.*;
 import org.pl.serwis_logownia.entities.Role;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import java.util.Base64;
+import java.util.*;
 
-import java.util.Date;
-import java.util.List;
 
 @Component
 public class JwtUtils {
 
-    @Value("${jwt.secret}")
-    private static String jwtSecret;
+    private static final String jwtSecret="ThisIsASecureSecretKeyForHS512ThatIsAtLeast64CharactersLongAndMore";
 
-    @Value("${jwt.expiration}")
-    private static long jwtExpirationMs;
+    private static String encodedKey = Base64.getEncoder().encodeToString(jwtSecret.getBytes());
+
+    private static final long jwtExpirationMs=900000;
 
     public static String generateJwtToken(String login, List<Role> roles) {
-        Claims claims = Jwts.claims().setSubject(login).build();
-        claims.put("roles", roles.stream().map(Enum::name).toList());
 
+        Map<String, Object> claims = new HashMap<>();
+        claims.put("roles", roles.stream().map(Enum::name).toList());
         return Jwts.builder()
-                .setClaims(claims)
-                .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + jwtExpirationMs))
-                .signWith(SignatureAlgorithm.HS512, jwtSecret)
+                .setHeaderParam("typ", "JWT")
+                .subject(login)
+                .claims(claims)
+                .expiration(new Date(System.currentTimeMillis() + jwtExpirationMs))
+                .issuedAt(new Date())
+                .signWith(SignatureAlgorithm.HS512, encodedKey)
                 .compact();
     }
 
     public static boolean validateJwtToken(String token) {
         try {
-            Jwts.parser().setSigningKey(jwtSecret).build().parseClaimsJws(token);
+            Jwts.parser().setSigningKey(encodedKey).build().parseClaimsJws(token);
             return true;
         } catch (JwtException | IllegalArgumentException e) {
             System.out.println("JWT Token is not valid: " + e.getMessage());
@@ -42,7 +44,7 @@ public class JwtUtils {
     public static Claims getClaimsFromJwtToken(String token) {
         if (validateJwtToken(token)) {
             return Jwts.parser()
-                    .setSigningKey(jwtSecret)
+                    .setSigningKey(encodedKey)
                     .build()
                     .parseClaimsJws(token)
                     .getBody();
