@@ -7,13 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="serwis_token" />
-        <module name="serwis_db" />
         <module name="serwis_logowania" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="lotnisko_projekt" target="17" />
+      <module name="serwis_db" target="17" />
+      <module name="serwis_token" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
